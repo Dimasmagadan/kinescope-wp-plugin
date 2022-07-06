@@ -12,6 +12,10 @@
  * @package         Kinescope
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! function_exists( 'kinescope_oembed_provider' ) ){
 	function kinescope_oembed_provider() {
 		wp_oembed_add_provider( 'https://kinescope.io/*', 'https://kinescope.io/oembed?format={format}', false );
