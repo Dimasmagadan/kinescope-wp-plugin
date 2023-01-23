@@ -7,7 +7,7 @@
  * Contributors:    odminstudios
  * Text Domain:     kinescope
  * Domain Path:     /languages
- * Version:         0.1.1
+ * Version:         0.2.1
  *
  * @package         Kinescope
  */
@@ -22,3 +22,15 @@ if ( ! function_exists( 'kinescope_oembed_provider' ) ){
 	}
 	add_action( 'init', 'kinescope_oembed_provider' );
 }
+
+function kinescope_register_oembed_provider_block() {
+    wp_register_script(
+        'kinescope-block-editor-script',
+        plugin_dir_url( __FILE__ ) . 'block/block.js',
+        array( 'wp-blocks', 'wp-element' )
+    );
+
+	register_block_type_from_metadata( plugin_dir_path( __FILE__ ) . 'block/block.json' );
+}
+add_action( 'init', 'kinescope_register_oembed_provider_block' );
+

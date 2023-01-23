@@ -1,0 +1,20 @@
+{
+    "name": "kinescope/embed-video",
+    "parent": [
+        "core/embed"
+    ],
+    "title": "Kinescope Video",
+    "icon": "embed-twitter",
+    "category": "embed",
+    "attributes": {
+        "email": {
+            "type": "string",
+            "default": ""
+        },
+        "includeEmail": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "editorScript": "kinescope-block-editor-script"
+}
