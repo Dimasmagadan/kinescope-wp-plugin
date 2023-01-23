@@ -25,7 +25,7 @@ services:
     user: root
     environment: *wordpress-variables
     volumes:
-      - ./plugin:/var/www/html/wp-content/plugins/kineskope
+      - ./plugin/:/var/www/html/wp-content/plugins/kineskope/
     depends_on:
       - db
   wp-cli:
@@ -51,9 +51,11 @@ services:
     volumes:
       - db_data:/var/lib/mysql
   webpack:
-    container_name: kineskope_node
+    container_name: kineskope_webpack
+    working_dir: /app
     image: node:14-slim
-    command: bash -c "npm install && npm run dev"
+    command: bash -c "yarn install && yarn run watch"
+    # command: tail -F anything
     volumes:
       - ./:/app
   phpunit:
