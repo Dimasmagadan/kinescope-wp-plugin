@@ -54,7 +54,7 @@ services:
     container_name: kineskope_webpack
     working_dir: /app
     image: node:14-slim
-    command: bash -c "yarn install && yarn run watch"
+    command: bash -c "yarn install --frozen-lockfile && yarn run watch"
     # command: tail -F anything
     volumes:
       - ./:/app

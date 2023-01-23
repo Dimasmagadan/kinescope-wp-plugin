@@ -1,5 +1,5 @@
-const { TextControl, CheckboxControl } = wp.components;
-const { useState } = wp.element;
+import { TextControl, CheckboxControl } from "@wordpress/components";
+import { useState } from "@wordpress/element";
 
 const Edit = ( props ) => {
     const [ email, setEmail ] = useState( props.attributes.email );

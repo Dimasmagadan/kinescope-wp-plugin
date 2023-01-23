@@ -1,10 +1,11 @@
 {
     "name": "kinescope/embed-video",
+    "title": "Kinescope Video",
+    "description": "Add a block that displays content pulled from Kinescope.",
     "parent": [
         "core/embed"
     ],
-    "title": "Kinescope Video",
-    "icon": "embed-twitter",
+    "icon": "embed-generic",
     "category": "embed",
     "attributes": {
         "email": {
@@ -14,7 +15,8 @@
         "includeEmail": {
             "type": "boolean",
             "default": false
-        }
+        },
+        "providerNameSlug": "kinescope"
     },
     "editorScript": "kinescope-block-editor-script"
 }
