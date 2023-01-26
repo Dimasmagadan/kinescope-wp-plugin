@@ -1,0 +1,26 @@
+{
+  "name": "Kineskope",
+  "version": "0.2.0",
+  "description": "Building better video experiences. Kinescope video player.",
+  "main": "index.js",
+  "repository": "https://github.com/Dimasmagadan/kinescope-wp-plugin",
+  "author": "Dimasmagadan",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@wordpress/scripts": "^7.1.0",
+    "babel-loader": "^8.2.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^4.0.0"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@wordpress/block-editor": "^11.2.0",
+    "@wordpress/hooks": "^3.25.0"
+  }
+}
